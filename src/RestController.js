@@ -13,7 +13,7 @@ class RestController extends React.Component {
 		];
 	}
 	componentDidMount() {
-		fetch('http://localhost:8080/paslon/add')
+		fetch('http://localhost:8080/paslon')
 			.then(response => {
 				return response.json();
 			}).then(result => {

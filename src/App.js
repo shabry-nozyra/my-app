@@ -1,99 +1,88 @@
 import React from 'react';
-import Sidebar from './Sidebar'
-
-function App() {
-  return (
-    <div className="App">
-    <div class="container-fluid">
-    <div class="row pt-0">
-        <div class="col-12 header-bar">
-            <div class="judul-halaman-content">Beranda</div>
-            <div class="keterangan-halaman-content pt-1">Selamat datang di Aplikasi NOZYRA Rancak Pantau Suara Pilkada</div>
-        </div>
-    </div>
-
-
-    <div class="row pt-1">
-        <div class="col-12 col-lg-4 col-md-6 col-sm-6 text-center">
-            <div class="card task">
-                <div class="card-body text-left mini-stat-img">
-                    <div class="icon-task float-right">
-                        <i class="fa fa-fw fa-lg fa-building"></i>
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+    useRouteMatch,
+    useParams
+  } from "react-router-dom";
+  import Paslon from "./Paslon";
+  import Laporan from "./Laporan";
+  import Home from "./Home";
+  import Tps from "./Tps";
+  import Sidebar from "./Sidebar";
+import { Navbar } from './Navbar';
+import InputSuara from './InputSuara';
+import Report from './Report';
+import TambahPaslon from './TambahPaslon';
+import TambahTps from './TambahTps';
+import PetugasTps from './PetugasTps';
+import PetugasKecamatan from './PetugasKecamatan';
+import PetugasKabupaten from './PetugasKabupaten';
+import Lokasi from './Lokasi';
+import PageContent from './PageContent';
+import EditPaslon from './EditPaslon';
+  export default function BasicExample() {
+      return (
+        <Router>
+              <div id="wrapper">
+             <Sidebar />
+             <div id="content-wrapper" className="d-flex flex-column">
+                <div id="content">
+                    <Navbar />
+                    <div className="container-fluid">
+                    <Switch>
+                        <Route exact path="/">
+                        <Home />
+                        </Route>
+                        <Route path="/paslon">
+                        <Paslon />
+                        </Route>
+                        <Route path="/laporan">
+                        <Laporan />
+                        </Route>
+                        <Route path="/Tps">
+                        <Tps />
+                        </Route>
+                        <Route path="/Inputsuara">
+                        <InputSuara />
+                        </Route>
+                        <Route path="/Report">
+                        <Report />
+                        </Route>
+                        <Route path="/TambahPaslon">
+                        <TambahPaslon />
+                        </Route>
+                        <Route path="/TambahTps">
+                        <TambahTps />
+                        </Route>
+                        <Route path="/PetugasTps">
+                        <PetugasTps />
+                        </Route>
+                        <Route path="/PetugasKec">
+                        <PetugasKecamatan />
+                        </Route>
+                        <Route path="/PetugasKab">
+                        <PetugasKabupaten />
+                        </Route>
+                        <Route path="/Lokasi">
+                        <Lokasi />
+                        </Route>
+                        <Route path="/halaman">
+                        <PageContent />
+                        </Route>
+                        <Route path="/editpaslon">
+                        <EditPaslon />
+                        </Route>
+                        {/* <Route path="/TambahPetugasTps">
+                        <TambahPetugasTps />
+                        </Route> */}
+                    </Switch>
                     </div>
-                    <h5 class="card-title mb-3">TPS</h5>
-                    <h4 class="card-title nomor fs24">@TPS</h4>
-
-                    <a href="" class="btn btn-outline-light btn-sm">Lihat Detail</a>
                 </div>
             </div>
-        </div>
-
-        <div class="col-12 col-lg-4 col-md-6 col-sm-6 text-center">
-            <div class="card task">
-                <div class="card-body text-left">
-                    <div class="icon-task float-right">
-                        <i class="fa fa-fw fa-lg fa-address-card"></i>
-                    </div>
-                    <h5 class="card-title mb-3">Petugas TPS</h5>
-                    <h4 class="card-title nomor fs24">@TPS</h4>
-                    <a href="" class="btn btn-outline-light btn-sm">Lihat Detail</a>
-                </div>
             </div>
-        </div>
-        <div class="col-12 col-lg-4 col-md-6 col-sm-6 text-center">
-            <div class="card task">
-                <div class="card-body text-left">
-                    <div class="icon-task float-right">
-                        <i class="fa fa-fw fa-lg fa-address-card"></i>
-                    </div>
-                    <h5 class="card-title mb-3">Pasangan Bupati</h5>
-                    <h4 class="card-title nomor fs24">3</h4>
-                    <a href="/paslon.html" class="btn btn-outline-light btn-sm">Lihat Detail</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-lg-4 col-md-6 col-sm-6 text-center">
-            <div class="card task">
-                <div class="card-body text-left">
-                    <div class="icon-task float-right">
-                        <i class="fa fa-fw fa-lg fa-id-card"></i>
-                    </div>
-                    <h5 class="card-title mb-3">Petugas Kecamatan</h5>
-                    <h4 class="card-title nomor fs24">@Kec</h4>
-                    <a href="" class="btn btn-outline-light btn-sm">Lihat Detail</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-lg-4 col-md-6 col-sm-6 text-center">
-            <div class="card task">
-                <div class="card-body text-left">
-                    <div class="icon-task float-right">
-                        <i class="fa fa-fw fa-lg fa-address-book"></i>
-                    </div>
-                    <h5 class="card-title mb-3">Petugas Kabupaten</h5>
-               
-
-                    <h4 class="card-title nomor fs24">@Kab</h4>
-                    <a href="" class="btn btn-outline-light btn-sm">Lihat Detail</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-lg-4 col-md-6 col-sm-6 text-center">
-            <div class="card task">
-                <div class="card-body text-left">
-                    <div class="icon-task float-right">
-                        <i class="fa fa-fw fa-lg fa-file"></i>
-                    </div>
-                    <h5 class="card-title mb-3">Laporan</h5>
-                        <h4 class="card-title nomor fs24">9</h4>
-                    <a href="" class="btn btn-outline-light btn-sm">Lihat Detail</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-    </div>
-  );
-}
-
-export default App;
+        </Router>
+      );
+  }
