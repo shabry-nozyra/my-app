@@ -5,7 +5,7 @@ class Lokasi extends React.Component {
     render() {
         return (
             <div className="p-2">
-                <h2>Pengaturan Lokasi</h2>
+                <h2>Pengaturan Lokasiku ini</h2>
                 <hr></hr>
                 <div class="row">
                     <div class="col-12">
