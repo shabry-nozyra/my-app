@@ -10,7 +10,7 @@ function Home() {
             </div>
             <div className="row pt-0">
                 <div className="col-12 header-bar">
-                    <div className="judul-halaman-content">Beranda</div>
+                    <div className="judul-halaman-content">Test beranda</div>
                     <div className="keterangan-halaman-content pt-1">Selamat datang di Aplikasi NOZYRA Rancak Pantau Suara Pilkada</div>
                 </div>
             </div>
