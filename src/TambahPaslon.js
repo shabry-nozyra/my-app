@@ -24,7 +24,7 @@ class TambahPaslon extends React.Component {
           no_urut: 9,
           foto: this.state.foto
         }
-        axios.post('http://localhost:8080/paslon/add',data)
+        axios.post('https://pantauapp.azurewebsites.net/paslon/add',data)
         .then((res)=>{
           console.log(res)
         }).catch((err)=>{
@@ -38,7 +38,7 @@ class TambahPaslon extends React.Component {
                 <hr></hr>
                 <div class="row">
                    <div className="col-12">
-                   <form action="https://rancak.nozyra.xyz/pasanganbupati/tambah" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+                   <form action="https://pantauapp.azurewebsites.net/paslon/add" enctype="multipart/form-data" method="post" accept-charset="utf-8">
                         <div class="form-group row">
                             <div class="col-sm-4">
                                 <label for="">Calon Bupati</label>

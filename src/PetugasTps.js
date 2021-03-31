@@ -102,7 +102,7 @@ class PetugasTps extends React.Component {
     }
 
     componentDidMount() {
-        fetch('http://localhost:8080/petugastps')
+        fetch('https://pantauapp.azurewebsites.net/petugastps')
             .then(response => {
                 return response.json();
             }).then(results => {
@@ -159,7 +159,7 @@ class PetugasTps extends React.Component {
                                 <div class=" col-12 text-right">
                                     <div>
                                         <a class="btn btn-danger mr-3" target="_blank"
-                                            href="https://rancak.nozyra.xyz/laporantps/tps"><i
+                                            href=""><i
                                                 class="fa fa-fw fa-file-pdf"></i> Simpan pdf</a>
                                     </div>
                                 </div>

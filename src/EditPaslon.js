@@ -9,7 +9,7 @@ class EditPaslon extends React.Component {
                 <hr></hr>
                 <div class="row">
                     <div className="col-12">
-                        <form action="https://rancak.nozyra.xyz/pasanganbupati/edit/1" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+                        <form action="" enctype="multipart/form-data" method="post" accept-charset="utf-8">
 
 
                             <input type="hidden" name="id" value="1"></input>

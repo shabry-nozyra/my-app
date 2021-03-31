@@ -66,8 +66,8 @@ class TambahTps extends React.Component {
                                 <label for="inputpermalink" class="col-sm-2 col-form-label"></label>
                                 <div class="col-sm-6">
                                     <button type="submit" class="btn btn-sm btn-primary mr-2" name="simpantps"><i class="fa fa-fw fa-sm fa-save"></i> Simpan</button>
-                                    <a class="btn btn-sm mr-2 btn-danger text-white" href="https://rancak.nozyra.xyz/tpsadmin/"><i class="fa fa-fw fa-reply"></i> Batal</a>
-                                    <a class="btn btn-sm btn-warning mr-2" href="https://rancak.nozyra.xyz/tpsadmin/inputtps"><i class="fa fa-fw fa-undo"></i> Reset</a>
+                                    <a class="btn btn-sm mr-2 btn-danger text-white" href=""><i class="fa fa-fw fa-reply"></i> Batal</a>
+                                    <a class="btn btn-sm btn-warning mr-2" href=""><i class="fa fa-fw fa-undo"></i> Reset</a>
                                 </div>
                             </div>
                         </form>

@@ -13,7 +13,7 @@ class Paslon extends React.Component {
         ];
     }
     componentDidMount() {
-        fetch('http://localhost:8080/paslon')
+        fetch('https://pantauapp.azurewebsites.net/paslon')
             .then(response => {
                 return response.json();
             }).then(result => {
@@ -51,7 +51,7 @@ class Paslon extends React.Component {
                                             </Card.Text>
                                         </Card.Body>
                                         <div class="float-icon" id="1">
-                                            <a class="btn btn-danger text-white" data-toggle="tooltip" data-placement="top" title="" href="https://rancak.nozyra.xyz/pasanganbupati/hapus/1" onclick="return confirm('yakin ingin menghapus data?')" data-original-title="Hapus"><i class="fa fa-fw  fa-trash"></i></a>
+                                            <a class="btn btn-danger text-white" data-toggle="tooltip" data-placement="top" title="" href="" onclick="return confirm('yakin ingin menghapus data?')" data-original-title="Hapus"><i class="fa fa-fw  fa-trash"></i></a>
                                             <a href="editpaslon/" class="btn btn-warning text-white" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="fa fa-fw fa-edit"></i></a>
                                         </div>
                                     </Card>

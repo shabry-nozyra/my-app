@@ -88,7 +88,7 @@ class PetugasKecamatan extends React.Component {
     }
 
     componentDidMount() {
-        fetch('http://localhost:8080/petugaskec')
+        fetch('https://pantauapp.azurewebsites.net/petugaskec')
             .then(response => {
                 return response.json();
             }).then(results => {
@@ -145,7 +145,7 @@ class PetugasKecamatan extends React.Component {
                                 <div className=" col-12 text-right">
                                     <div>
                                         <a className="btn btn-danger mr-3" target="_blank"
-                                            href="https://rancak.nozyra.xyz/laporantps/tps"><i
+                                            href=""><i
                                                 className="fa fa-fw fa-file-pdf"></i> Simpan pdf</a>
                                     </div>
                                 </div>

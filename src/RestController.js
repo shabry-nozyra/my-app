@@ -13,7 +13,7 @@ class RestController extends React.Component {
 		];
 	}
 	componentDidMount() {
-		fetch('http://localhost:8080/paslon')
+		fetch('https://pantauapp.azurewebsites.net/paslon')
 			.then(response => {
 				return response.json();
 			}).then(result => {

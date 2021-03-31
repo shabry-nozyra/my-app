@@ -77,7 +77,7 @@ class PageContent extends React.Component {
     }
 
     componentDidMount() {
-        fetch('http://localhost:8080/konten')
+        fetch('https://pantauapp.azurewebsites.net/konten')
             .then(response => {
                 return response.json();
             }).then(results => {
