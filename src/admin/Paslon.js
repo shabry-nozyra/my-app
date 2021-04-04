@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { Card, Button } from 'react-bootstrap';
+import { NavbarAdmin } from '../components/NavbarAdmin';
+import Sidebar from "../components/Sidebar";
 
 class Paslon extends React.Component {
     constructor(props) {
@@ -26,6 +28,12 @@ class Paslon extends React.Component {
 
     render() {
         return (
+            <div id="wrapper">
+            <Sidebar />
+            <div id="content-wrapper" className="d-flex flex-column">
+               <div id="content">
+                   <NavbarAdmin />
+                   <div className="container-fluid">
             <div className="p-2">
                 <h2>Daftar Pasangan Calon Bupati</h2>
                 <hr></hr>
@@ -61,6 +69,10 @@ class Paslon extends React.Component {
                     }
                 </div>
             </div>
+            </div>
+          </div>
+      </div>
+      </div>
         )
     }
 }

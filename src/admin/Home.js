@@ -4,13 +4,13 @@ function Home() {
     return (
         <div className="">
             <div className="d-sm-flex align-items-center justify-content-between mb-4">
-                <h1 className="h3 mb-0 text-gray-800">HALAMAN DEPAN2</h1>
+                <h1 className="h3 mb-0 text-gray-800">HALAMAN DEPAN</h1>
                 <a href="#" className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                    className="fas fa-download fa-sm text-white-50"></i> Generate Report2</a>
+                    className="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
             </div>
             <div className="row pt-0">
                 <div className="col-12 header-bar">
-                    <div className="judul-halaman-content">Test beranda</div>
+                    {/* <div className="judul-halaman-content">Test beranda</div> */}
                     <div className="keterangan-halaman-content pt-1">Selamat datang di Aplikasi NOZYRA Rancak Pantau Suara Pilkada</div>
                 </div>
             </div>
@@ -24,7 +24,7 @@ function Home() {
                             <h5 className="card-title mb-3">TPS</h5>
                             <h4 className="card-title nomor fs24">@TPS</h4>
 
-                            <a href="" className="btn btn-outline-light btn-sm">Lihat Detail</a>
+                            <a href="/tps" className="btn btn-outline-light btn-sm">Lihat Detail</a>
                         </div>
                     </div>
                 </div>
@@ -36,7 +36,7 @@ function Home() {
                             </div>
                             <h5 className="card-title mb-3">Petugas TPS</h5>
                             <h4 className="card-title nomor fs24">@TPS</h4>
-                            <a href="" className="btn btn-outline-light btn-sm">Lihat Detail</a>
+                            <a href="/petugastps" className="btn btn-outline-light btn-sm">Lihat Detail</a>
                         </div>
                     </div>
                 </div>
@@ -61,7 +61,7 @@ function Home() {
                             </div>
                             <h5 className="card-title mb-3">Petugas Kecamatan</h5>
                             <h4 className="card-title nomor fs24">@Kec</h4>
-                            <a href="" className="btn btn-outline-light btn-sm">Lihat Detail</a>
+                            <a href="/petugaskec" className="btn btn-outline-light btn-sm">Lihat Detail</a>
                         </div>
                     </div>
                 </div>
@@ -75,7 +75,7 @@ function Home() {
 
 
                             <h4 className="card-title nomor fs24">@Kab</h4>
-                            <a href="" className="btn btn-outline-light btn-sm">Lihat Detail</a>
+                            <a href="/petugaskab" className="btn btn-outline-light btn-sm">Lihat Detail</a>
                         </div>
                     </div>
                 </div>
@@ -87,7 +87,7 @@ function Home() {
                             </div>
                             <h5 className="card-title mb-3">Laporan</h5>
                             <h4 className="card-title nomor fs24">9</h4>
-                            <a href="" className="btn btn-outline-light btn-sm">Lihat Detail</a>
+                            <a href="/report" className="btn btn-outline-light btn-sm">Lihat Detail</a>
                         </div>
                     </div>
                 </div>

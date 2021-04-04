@@ -4,7 +4,7 @@ export default class Sidebar extends Component {
     render() {
         return (
             <ul className="navbar-nav bg-sidebar-app sidebar sidebar-dark accordion" id="accordionSidebar">
-                <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+                <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/adminpant4u">
                     <div className="sidebar-brand-icon">
                         <img src="https://rancak.nozyra.xyz/assets/images/nozyra-menu.png" height="40px"></img>
                     </div>
@@ -12,7 +12,7 @@ export default class Sidebar extends Component {
                 </a>
                 <hr className="sidebar-divider my-0" />
                 <li className="nav-item active">
-                    <a className="nav-link" href="/">
+                    <a className="nav-link" href="/adminpant4u">
                         <i className="fas fa-fw fa-home"></i>
                         <span>Dashboard</span></a>
                 </li>
