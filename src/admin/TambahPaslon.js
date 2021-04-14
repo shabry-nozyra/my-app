@@ -14,6 +14,7 @@ class TambahPaslon extends React.Component {
       foto: ''
     }
   }
+
   onChange = (e) => {
     this.setState({
       [e.target.id]: e.target.value
