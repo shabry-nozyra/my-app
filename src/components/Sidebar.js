@@ -17,23 +17,23 @@ export default class Sidebar extends Component {
                         <span>Dashboard</span></a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link " href="/paslon">
+                    <a className="nav-link " href="/adminpant4u/paslon">
                         <i className="fa fa-fw fa-user-plus"></i>
                         <span>Paslon Bupati</span></a>
                 </li>
 
                 <li className="nav-item">
-                    <a className="nav-link " href="/tps">
+                    <a className="nav-link " href="/adminpant4u/tps">
                         <i className="fa fa-fw fa-building"></i>
                         <span>TPS</span></a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="/inputsuara">
+                    <a className="nav-link" href="/adminpant4u/inputsuara">
                         <i className="fa fa-fw fa-keyboard"></i>
                         <span>Input Suara <i className="fa fa-fw fa-star"></i></span></a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="/report">
+                    <a className="nav-link" href="/adminpant4u/report">
                         <i className="fa fa-fw fa-file"></i>
                         <span>Laporan</span></a>
                 </li>
@@ -46,22 +46,22 @@ export default class Sidebar extends Component {
                     </a>
                     <div id="collapsePages" className="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                         <div className="bg-white py-2 collapse-inner rounded">
-                            <a className="collapse-item" href="/petugastps">Petugas TPS</a>
-                            <a className="collapse-item" href="/petugaskec">Petugas Kecamatan</a>
-                            <a className="collapse-item" href="/petugaskab">Petugas Kabupaten</a>
+                            <a className="collapse-item" href="/adminpant4u/petugastps">Petugas TPS</a>
+                            <a className="collapse-item" href="/adminpant4u/petugaskec">Petugas Kecamatan</a>
+                            <a className="collapse-item" href="/adminpant4u/petugaskab">Petugas Kabupaten</a>
                         </div>
                     </div>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pengaturan"
+                    <a className="nav-link collapsed" href="/adminpant4u" data-toggle="collapse" data-target="#pengaturan"
                         aria-expanded="true" aria-controls="pengaturan">
                         <i className="fas fa-fw fa-cog"></i>
                         <span>Pengaturan</span>
                     </a>
                     <div id="pengaturan" className="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                         <div className="bg-white py-2 collapse-inner rounded">
-                            <a className="collapse-item" href="/lokasi">Pengaturan Lokasi</a>
-                            <a className="collapse-item" href="/halaman">Pengaturan Halaman</a>
+                            <a className="collapse-item" href="/adminpant4u/lokasi">Pengaturan Lokasi</a>
+                            <a className="collapse-item" href="/adminpant4u/halaman">Pengaturan Halaman</a>
                         </div>
                     </div>
                 </li>

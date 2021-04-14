@@ -12,7 +12,7 @@ const Login = () => {
                                 <div class="row m-0 p-0">
                                     <div class="col-lg-12 sign-kotak">
                                         <div class="text-center">
-                                            <img src="" class="img-signup" />
+                                            <img src="" class="img-signup" alt="gambar-login" />
                                             <h3 class="gray70 welcome-sign">Selamat Datang <br /><br /> NOZYRA RANCAK <br /><span class="small">Pantau Suara Pilkada</span></h3>
                                             <p class="mb-3 gray70 welcome-sign-text mt-3">Silahkan masuk untuk melanjutkan</p>
                                         </div>

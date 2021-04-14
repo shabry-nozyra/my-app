@@ -1,48 +1,48 @@
 import axios from "axios";
 
-export const GET_TPSS_LIST = "GET_TPSS_LIST";
-export const GET_TPS_DETAIL = "GET_TPS_DETAIL";
-export const DELETE_TPS_DETAIL = "DELETE_TPS_DETAIL";
-export const POST_TPS_CREATE = "POST_TPS_CREATE";
-export const PUT_TPS_EDIT = "PUT_TPS_EDIT";
-export const DELETE_TPS = "DELETE_TPS";
+export const GET_PASLON_LIST = "GET_PASLON_LIST";
+export const POST_PASLON_CREATE = "POST_PASLON_CREATE";
+export const GET_PASLON_DETAIL = "GET_PASLON_DETAIL";
+export const DELETE_PASLON_DETAIL = "DELETE_PASLON_DETAIL";
+export const PUT_PASLON_EDIT = "PUT_PASLON_EDIT";
+export const DELETE_PASLON = "DELETE_PASLON";
 
 
-
-export const getTpssList = () => {
-  return (dispatch) => {
-    axios.get("https://pantauapp.azurewebsites.net/tps")
-      .then(function (response) {
-        dispatch({
-          type: GET_TPSS_LIST,
-          payload: {
-            data: response.data,
-            errorMessage: false,
-          },
+export const getPaslonsList = () => {
+    return (dispatch) => {
+      axios.get("https://pantauapp.azurewebsites.net/paslon")
+        .then(function (response) {
+          dispatch({
+            type: GET_PASLON_LIST,
+            payload: {
+              data: response.data,
+              errorMessage: false,
+            },
+          });
+        })
+        .catch(function (error) {
+          dispatch({
+            type: GET_PASLON_LIST,
+            payload: {
+              data: false,
+              errorMessage: error.message,
+            },
+          });
         });
-      })
-      .catch(function (error) {
-        dispatch({
-          type: GET_TPSS_LIST,
-          payload: {
-            data: false,
-            errorMessage: error.message,
-          },
-        });
-      });
+    };
   };
-};
 
-export const getTpsDetail = (id) => {
+  
+export const getPaslonDetail = (id) => {
   return (dispatch) => {
     axios
       .get(
-        "https://pantauapp.azurewebsites.net/tps/" +
+        "https://pantauapp.azurewebsites.net/paslon/" +
         id
       )
       .then(function (response) {
         dispatch({
-          type: GET_TPS_DETAIL,
+          type: GET_PASLON_DETAIL,
           payload: {
             data: response.data,
             errorMessage: false,
@@ -51,7 +51,7 @@ export const getTpsDetail = (id) => {
       })
       .catch(function (error) {
         dispatch({
-          type: GET_TPS_DETAIL,
+          type: GET_PASLON_DETAIL,
           payload: {
             data: false,
             errorMessage: error.message,
@@ -60,10 +60,10 @@ export const getTpsDetail = (id) => {
       });
   };
 };
-export const deleteTpsDetail = (id) => {
+export const deletePaslonDetail = (id) => {
   return (dispatch) => {
     dispatch({
-      type: DELETE_TPS_DETAIL,
+      type: DELETE_PASLON_DETAIL,
       payload: {
         data: false,
         errorMessage: false,
@@ -71,19 +71,18 @@ export const deleteTpsDetail = (id) => {
     });
   };
 };
-
-export const postTpsCreate = (data) => {
+export const postPaslonCreate = (data) => {
   return (dispatch) => {
     axios
       .post(
-        "https://pantauapp.azurewebsites.net/tps/add",
+        "https://pantauapp.azurewebsites.net/paslon/add",
         data
       )
       .then(function (response) {
         console.log(response);
 
         dispatch({
-          type: POST_TPS_CREATE,
+          type: POST_PASLON_CREATE,
           payload: {
             data: response.data,
             errorMessage: false,
@@ -92,7 +91,7 @@ export const postTpsCreate = (data) => {
       })
       .catch(function (error) {
         dispatch({
-          type: POST_TPS_CREATE,
+          type: POST_PASLON_CREATE,
           payload: {
             data: false,
             errorMessage: error.message,
@@ -102,18 +101,18 @@ export const postTpsCreate = (data) => {
   };
 };
 
-export const putTpsUpdate = (data) => {
+export const putPaslonUpdate = (data) => {
   return (dispatch) => {
     axios
       .put(
-        "https://pantauapp.azurewebsites.net/tps/update",
+        "https://pantauapp.azurewebsites.net/paslon/update",
         data
       )
       .then(function (response) {
         console.log(response);
 
         dispatch({
-          type: PUT_TPS_EDIT,
+          type: PUT_PASLON_EDIT,
           payload: {
             data: response.data,
             errorMessage: false,
@@ -122,7 +121,7 @@ export const putTpsUpdate = (data) => {
       })
       .catch(function (error) {
         dispatch({
-          type: PUT_TPS_EDIT,
+          type: PUT_PASLON_EDIT,
           payload: {
             data: false,
             errorMessage: error.message,
@@ -133,11 +132,11 @@ export const putTpsUpdate = (data) => {
 };
 
 
-export const deleteTPS = (id) => {
+export const deletePaslon = (id) => {
   return (dispatch) => {
     axios
       .delete(
-        "https://pantauapp.azurewebsites.net/tps/delete/"+
+        "https://pantauapp.azurewebsites.net/paslon/delete/"+
         id
       )
       .then(function (response) {
@@ -151,17 +150,17 @@ export const deleteTPS = (id) => {
 
 
 
-export const deleteDataTPS = () => {
+export const deleteDataPaslon = () => {
   return (dispatch) => {
     dispatch({
-      type: GET_TPS_DETAIL,
+      type: GET_PASLON_DETAIL,
       payload: {
         data: false,
         errorMessage: false,
       },
     });
     dispatch({
-      type: POST_TPS_CREATE,
+      type: POST_PASLON_CREATE,
       payload: {
         data: false,
         errorMessage: false,

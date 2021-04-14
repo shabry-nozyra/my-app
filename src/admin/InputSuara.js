@@ -6,11 +6,6 @@ import Sidebar from "../components/Sidebar";
 class InputSuara extends React.Component {
     render() {
         return (
-            <div id="wrapper">
-            <Sidebar />
-            <div id="content-wrapper" className="d-flex flex-column">
-               <div id="content">
-                   <NavbarAdmin />
                    <div className="container-fluid">
                         <div className="p-2">
                             <h2>Input Suara</h2>
@@ -137,9 +132,6 @@ class InputSuara extends React.Component {
                             </div>
                         </div>
                      </div>
-                </div>
-            </div>
-        </div>
         )
     }
 }

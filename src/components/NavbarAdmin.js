@@ -7,8 +7,8 @@ export const NavbarAdmin = () => {
         </button>
         <ul className="navbar-nav ml-auto">
         <li className="nav-item dropdown no-arrow mx-1">
-                <a className="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a className="nav-link dropdown-toggle" href="/beranda" target="_blank" id="alertsDropdown" role="button"
+                    aria-haspopup="true" aria-expanded="false">
                     <i className="fas fa-globe fa-fw"></i> lihat website
                 </a>
              </li>

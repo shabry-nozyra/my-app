@@ -5,8 +5,6 @@ function Home() {
         <div className="">
             <div className="d-sm-flex align-items-center justify-content-between mb-4">
                 <h1 className="h3 mb-0 text-gray-800">HALAMAN DEPAN</h1>
-                <a href="#" className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                    className="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
             </div>
             <div className="row pt-0">
                 <div className="col-12 header-bar">
@@ -24,7 +22,7 @@ function Home() {
                             <h5 className="card-title mb-3">TPS</h5>
                             <h4 className="card-title nomor fs24">@TPS</h4>
 
-                            <a href="/tps" className="btn btn-outline-light btn-sm">Lihat Detail</a>
+                            <a href="/adminpant4u/tps" className="btn btn-outline-light btn-sm">Lihat Detail</a>
                         </div>
                     </div>
                 </div>
@@ -36,7 +34,7 @@ function Home() {
                             </div>
                             <h5 className="card-title mb-3">Petugas TPS</h5>
                             <h4 className="card-title nomor fs24">@TPS</h4>
-                            <a href="/petugastps" className="btn btn-outline-light btn-sm">Lihat Detail</a>
+                            <a href="/adminpant4u/petugastps" className="btn btn-outline-light btn-sm">Lihat Detail</a>
                         </div>
                     </div>
                 </div>
@@ -48,7 +46,7 @@ function Home() {
                             </div>
                             <h5 className="card-title mb-3">Pasangan Bupati</h5>
                             <h4 className="card-title nomor fs24">@Paslon</h4>
-                            <a href="/paslon" className="btn btn-outline-light btn-sm">Lihat Detail</a>
+                            <a href="/adminpant4u/paslon" className="btn btn-outline-light btn-sm">Lihat Detail</a>
 
                         </div>
                     </div>
@@ -61,7 +59,7 @@ function Home() {
                             </div>
                             <h5 className="card-title mb-3">Petugas Kecamatan</h5>
                             <h4 className="card-title nomor fs24">@Kec</h4>
-                            <a href="/petugaskec" className="btn btn-outline-light btn-sm">Lihat Detail</a>
+                            <a href="/adminpant4u/petugaskec" className="btn btn-outline-light btn-sm">Lihat Detail</a>
                         </div>
                     </div>
                 </div>
@@ -72,10 +70,8 @@ function Home() {
                                 <i className="fa fa-fw fa-lg fa-address-book"></i>
                             </div>
                             <h5 className="card-title mb-3">Petugas Kabupaten</h5>
-
-
                             <h4 className="card-title nomor fs24">@Kab</h4>
-                            <a href="/petugaskab" className="btn btn-outline-light btn-sm">Lihat Detail</a>
+                            <a href="/adminpant4u/petugaskab" className="btn btn-outline-light btn-sm">Lihat Detail</a>
                         </div>
                     </div>
                 </div>
@@ -87,7 +83,7 @@ function Home() {
                             </div>
                             <h5 className="card-title mb-3">Laporan</h5>
                             <h4 className="card-title nomor fs24">9</h4>
-                            <a href="/report" className="btn btn-outline-light btn-sm">Lihat Detail</a>
+                            <a href="/adminpant4u/report" className="btn btn-outline-light btn-sm">Lihat Detail</a>
                         </div>
                     </div>
                 </div>
