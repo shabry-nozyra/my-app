@@ -1,14 +1,22 @@
 import React from 'react'
 import '../index.css';
 
-var totaltps = 461; var tpsmasuk = 193; var persenmasuk = 41.87; var suaramasuk = 41.87;
-
+function tick() {
+    const element = (
+        <h5>It is {new Date().toLocaleTimeString()}.</h5>
+    );
+  }
+setInterval(tick, 1000);
 class Footer extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { suaras: [] };
+        this.state = { suaras: [], date: new Date() };
     }
     componentDidMount() {
+        this.timerID = setInterval(
+            () => this.tick(),
+            1000
+          );
         fetch('https://pantaumicro.azurewebsites.net/suaratotal')
             .then(response => {
                 return response.json();
@@ -18,6 +26,14 @@ class Footer extends React.Component {
                 });
             });
     }
+    componentWillUnmount() {
+        clearInterval(this.timerID);
+      }
+      tick() {
+        this.setState({
+          date: new Date()
+        });
+      }
     render() {
         return (
             <div className="keterangan sticky-footer">
@@ -32,8 +48,8 @@ class Footer extends React.Component {
                     </div>
                     <div className="col-2 jam">
                         <div>
-                            <p className="text-center mb-0 text-dark bold" id="tanggal">0 Bulan 0000</p>
-                            <h5 className="text-center bold"><span id="jam">00</span> : <span id="menit">00</span> : <span id="detik">00</span></h5>
+                            <p className="text-center mb-0 text-dark bold" id="tanggal">{this.state.date.toLocaleDateString()}</p>
+                            <h5 className="text-center bold"> {this.state.date.toLocaleTimeString()}</h5>
                         </div>
                     </div>
                     <div className="col-2 text-center">
