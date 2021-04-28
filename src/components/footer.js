@@ -1,12 +1,7 @@
 import React from 'react'
 import '../index.css';
 
-function tick() {
-    const element = (
-        <h5>It is {new Date().toLocaleTimeString()}.</h5>
-    );
-  }
-setInterval(tick, 1000);
+
 class Footer extends React.Component {
     constructor(props) {
         super(props);
