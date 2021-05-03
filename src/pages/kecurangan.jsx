@@ -23,7 +23,8 @@ const Kecurangan = () => {
                     </nav>
                     <h3 className="text-success juduljudul text-danger">Informasi Kecurangan</h3>
                     <p className="small text-muted"><i>halaman tentang informasi kecurangan</i></p>
-                    <Card>
+                    
+                    {/* <Card>
                         <CardHeader>Test_Nama_Kecurangan</CardHeader>
                         <CardBody>
                             <Table striped>
@@ -46,6 +47,10 @@ const Kecurangan = () => {
                             </Table>
                         </CardBody>
                     </Card>
+                 */}
+
+                 <div className="alert alert-danger">Belum ada data</div>
+
                 </div>
                 <div className="col-md-3  p-0">
                     <div className="card">

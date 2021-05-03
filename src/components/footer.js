@@ -48,7 +48,7 @@ class Footer extends React.Component {
                         </div>
                     </div>
                     <div className="col-2 text-center">
-                        <a href="https://www.nozyra.com" target=""><b>www.nozyra.com</b></a>
+                        <a href="https://www.nozyra.com" target="_blank"><b>www.nozyra.com</b></a>
                     </div>
                 </div>
             </div>
