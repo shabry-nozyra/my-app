@@ -183,7 +183,7 @@ class BerandaComponent extends React.Component {
                                                     <CardText><h1>{persenpaslon[key]}%</h1></CardText>
                                                     <h5>{nilaipaslons[key]} Suara</h5>
                                                     <h1>{key + 1}</h1>
-                                                    <img top src={paslon1} alt="cap1" width="80%" />
+                                                    <img top src={"https://pantaustorage.blob.core.windows.net/blobpantau/"+item.foto} alt="cap1" width="80%" />
                                                     <CardText>{item.bupati} - {item.wakil}</CardText>
                                                 </CardBody>
                                             </Card>

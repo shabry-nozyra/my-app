@@ -8,7 +8,7 @@ import NavbarComponent from '../components/NavbarComponent';
 class PerolehanSuaraKecamatan extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { results: [] };
+        this.state = { results: [], kecamatan: [] };
         this.headers = [
             { key: 'id', label: 'id' },
             { key: 'id_tps', label: 'id_tps' },
@@ -20,12 +20,20 @@ class PerolehanSuaraKecamatan extends React.Component {
     }
     componentDidMount() {
         var kec = this.props.match.params.kec
-        fetch('https://pantaumicro.azurewebsites.net/suaraByKec/'+kec)
+        fetch('https://pantaumicro.azurewebsites.net/suaraByKec/' + kec)
             .then(response => {
                 return response.json();
             }).then(result => {
                 this.setState({
                     results: result
+                });
+            });
+        fetch('https://pantaumicro.azurewebsites.net/NamaKec')
+            .then(response => {
+                return response.json();
+            }).then(result => {
+                this.setState({
+                    kecamatan: result
                 });
             });
     }
@@ -55,11 +63,11 @@ class PerolehanSuaraKecamatan extends React.Component {
                                                     <div className="card-header bg-danger p-2">
                                                         <div className="row">
                                                             <div className="col-3">
-                                                                <p className="mb-0 text-white">TPS {item.id_tps}</p>
+                                                                <p className="mb-0 text-white">TPS {item.no_tps}</p>
                                                             </div>
                                                             <div className="col-9">
-                                                                <p className="mb-0 text-left text-white small">Nagari {"{nama_nagari}"}</p>
-                                                                <p className="mb-0 small text-white">{"{nama_lokasi}"}</p>
+                                                                <p className="mb-0 text-left text-white small">Nagari {item.nagari}</p>
+                                                                <p className="mb-0 small text-white">{item.lokasi}</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -231,12 +239,17 @@ class PerolehanSuaraKecamatan extends React.Component {
                                 </div>
                                 <div className="card-body p-2">
                                     <ul className="list-group">
-                                        <a href="/detailsuara" className="text-dark">
-                                            <li className="list-group-item d-flex justify-content-between align-items-center">
-                                                belum ada suara
-                                    {/* <span className="badge badge-danger badge-pill"> 1 TPS</span> */}
-                                            </li>
-                                        </a>
+                                        {
+                                            this.state.kecamatan.map(function (item, key) {
+                                                return (
+                                                    <a href={"/detail/" + item.kecamatan} className="text-dark" id={key}>
+                                                        <li className="list-group-item d-flex justify-content-between align-items-center">
+                                                            {item.kecamatan}
+                                                        </li>
+                                                    </a>
+                                                )
+                                            })
+                                        }
                                     </ul>
                                 </div>
                             </div>
