@@ -86,12 +86,17 @@ class PerolehanSuara extends React.Component {
                                 </div>
                                 <div className="card-body p-2">
                                     <ul className="list-group">
-                                        <a href="/detailsuara" className="text-dark">
-                                            <li className="list-group-item d-flex justify-content-between align-items-center">
-                                                belum ada suara
-                                    {/* <span className="badge badge-danger badge-pill"> 1 TPS</span> */}
-                                            </li>
-                                        </a>
+                                    {
+                                            this.state.results.map(function (item, key) {
+                                                return (
+                                                    <a href={"/detail/" + item.kecamatan} className="text-dark" id={key}>
+                                                        <li className="list-group-item d-flex justify-content-between align-items-center">
+                                                            {item.kecamatan}
+                                                        </li>
+                                                    </a>
+                                                )
+                                            })
+                                        }
                                     </ul>
                                 </div>
                             </div>
