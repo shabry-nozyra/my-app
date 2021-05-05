@@ -5,6 +5,7 @@ import {
   Route,
   Switch  
 } from "react-router-dom";
+import AddLokasi from './Lokasi/AddLokasi';
 class Lokasi extends React.Component {
   render() {
     return (
@@ -18,8 +19,8 @@ class Lokasi extends React.Component {
                   <Router>
                 <Switch>
                     <Route exact path="/adminpant4u/lokasi" component={LokasiComponent} />
-                    {/* <Route path="/adminpant4u/lokasi/kecamatan" component={TambahTps} />
-                    <Route path="/adminpant4u/lokasi/jorong" component={TambahTps} />
+                    <Route path="/adminpant4u/lokasi/addlokasi" component={AddLokasi} />
+                    {/* <Route path="/adminpant4u/lokasi/jorong" component={TambahTps} />
                     <Route path="/adminpant4u/lokasi/nagari" component={TambahTps} /> */}
                 </Switch>
                 </Router>

@@ -38,9 +38,10 @@ class DropdownComponent extends React.Component {
 	
 	render() {
 		return (
-			<div id="container mt-5">
-				<div>
-					<label>Kecamatan</label>
+			<div id="container mt-5 " className="row">
+
+				<div className="col-4">
+					<label>Kecamatan</label> <br />
 					<select placeholder="Country" value={this.state.selectedCountry} onChange={this.changeCountry}>
 						<option>--Pilih Kecamatan--</option>
 						{this.state.countries.map((e, key) => {
@@ -49,8 +50,8 @@ class DropdownComponent extends React.Component {
 					</select>
 				</div>
 
-				<div>
-					<label>Nagari</label>
+				<div className="col-4">
+					<label>Nagari</label><br />
 					<select placeholder="State" value={this.state.selectedState} onChange={this.changeState}>
 						<option>--Pilih Nagari--</option>
 						{this.state.states.map((e, key) => {
@@ -59,8 +60,8 @@ class DropdownComponent extends React.Component {
 					</select>
 				</div>
 				
-				<div>
-					<label>Jorong</label>
+				<div className="col-4">
+					<label>Jorong</label><br />
 					<select placeholder="City">
 						<option>--Pilih Jorong--</option>
 						{this.state.cities.map((e, key) => {
