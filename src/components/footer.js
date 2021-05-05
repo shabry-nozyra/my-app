@@ -1,6 +1,17 @@
 import React from 'react'
 import '../index.css';
 
+function Currency(bilangan) {
+    let number_string = bilangan,
+    sisa 	= number_string.length % 3,
+    rupiah 	= number_string.substr(0, sisa),
+    ribuan 	= number_string.substr(sisa).match(/\d{3}/g);
+    if (ribuan) {
+        let separator = sisa ? '.' : '';
+        rupiah += separator + ribuan.join('.');
+      }
+      return rupiah
+}
 
 class Footer extends React.Component {
     constructor(props) {
@@ -38,7 +49,7 @@ class Footer extends React.Component {
                             <span className="ml-3 text-primary">Jumlah Total TPS : <b id="tot-tps">{this.state.suaras.total_tps}</b></span>
                             <span className="ml-3 text-dark">Jumlah TPS masuk : <b id="tpsmasuk">{this.state.suaras.total_tps_masuk}</b></span>
                             <span className="ml-3 text-info">Persentase Suara Masuk : <b id="persentase">{this.state.suaras.persentase_suara_masuk}%</b></span>
-                            <span className="ml-3 text-success">Total Suara masuk : <b id="suaramasuk">{this.state.suaras.total_suara_masuk}</b></span>
+                            <span className="ml-3 text-success">Total Suara masuk : <b id="suaramasuk">{Currency(String(this.state.suaras.total_suara_masuk))}</b></span>
                         </p>
                     </div>
                     <div className="col-2 jam">

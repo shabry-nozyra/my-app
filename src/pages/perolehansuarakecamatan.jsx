@@ -8,7 +8,7 @@ import NavbarComponent from '../components/NavbarComponent';
 class PerolehanSuaraKecamatan extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { results: [], kecamatan: [] };
+        this.state = { results: [], kecamatan: [], paslons: [] };
         this.headers = [
             { key: 'id', label: 'id' },
             { key: 'id_tps', label: 'id_tps' },
@@ -28,6 +28,14 @@ class PerolehanSuaraKecamatan extends React.Component {
                     results: result
                 });
             });
+        fetch('https://pantauapp.azurewebsites.net/paslon')
+            .then(response => {
+                return response.json();
+            }).then(result => {
+                this.setState({
+                    paslons: result
+                });
+            });
         fetch('https://pantaumicro.azurewebsites.net/NamaKec')
             .then(response => {
                 return response.json();
@@ -39,6 +47,9 @@ class PerolehanSuaraKecamatan extends React.Component {
     }
     render() {
         var kec = this.props.match.params.kec;
+        var fotopaslon = this.state.paslons;
+        var suarapaslon = this.state.results;
+        console.log(suarapaslon);
         return (
             <div>
                 <NavbarComponent />
@@ -74,42 +85,28 @@ class PerolehanSuaraKecamatan extends React.Component {
                                                     <div className="card-body p-2">
 
                                                         <div className="row">
-                                                            <div className="col-6">
-                                                                <div className="card mb-3">
-                                                                    <div className="row no-gutters">
-                                                                        <div className="col-md-6 d-flex justify-content-center align-items-center p-1">
-                                                                            <img src={Foto} className="card-img" alt="foto_paslon_1" />
+                                                            {
+                                                                fotopaslon.map(function (itemku, keyku) {
+                                                                    return (
+                                                                        <div className="col-6">
+                                                                            <div className="card mb-3">
+                                                                                <div className="row no-gutters">
+                                                                                    <div className="col-md-6 d-flex justify-content-center align-items-center p-1">
+                                                                                        <img src={"https://pantaustorage.blob.core.windows.net/blobpantau/" + itemku.foto} className="card-img" alt="foto_paslon_3" />
+                                                                                    </div>
+                                                                                    <div className="col-md-6 d-flex justify-content-center align-items-center p-2">
+                                                                                         {keyku == 0 ? item.suara1: ""}
+                                                                                         {keyku == 1 ? item.suara2: ""}
+                                                                                         {keyku == 2 ? item.suara3: ""}
+                                                                                            {/* <h2 className="card-title">{item.suara2}</h2>   */}
+                                    
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
-                                                                        <div className="col-md-6 d-flex justify-content-center align-items-center p-2">
-                                                                            <h2 className="card-title">{item.suara1}</h2>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div className="col-6">
-                                                                <div className="card mb-3">
-                                                                    <div className="row no-gutters">
-                                                                        <div className="col-md-6 d-flex justify-content-center align-items-center p-1">
-                                                                            <img src={Foto} className="card-img" alt="foto_paslon_2" />
-                                                                        </div>
-                                                                        <div className="col-md-6 d-flex justify-content-center align-items-center p-2">
-                                                                            <h2 className="card-title">{item.suara2}</h2>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div className="col-6">
-                                                                <div className="card mb-3">
-                                                                    <div className="row no-gutters">
-                                                                        <div className="col-md-6 d-flex justify-content-center align-items-center p-1">
-                                                                            <img src={Foto} className="card-img" alt="foto_paslon_3" />
-                                                                        </div>
-                                                                        <div className="col-md-6 d-flex justify-content-center align-items-center p-2">
-                                                                            <h2 className="card-title">{item.suara3}</h2>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                                                    )
+                                                                })
+                                                            }
                                                         </div>
 
                                                     </div>

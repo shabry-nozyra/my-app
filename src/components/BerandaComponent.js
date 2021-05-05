@@ -19,6 +19,17 @@ const socket = new Pusher('d78a56b5e5e7ed44eeb4', {
 if (typeof window !== "undefined") {
     window.proj4 = window.proj4 || proj4;
 }
+function Currency(bilangan) {
+    let number_string = bilangan,
+    sisa 	= number_string.length % 3,
+    rupiah 	= number_string.substr(0, sisa),
+    ribuan 	= number_string.substr(sisa).match(/\d{3}/g);
+    if (ribuan) {
+        let separator = sisa ? '.' : '';
+        rupiah += separator + ribuan.join('.');
+      }
+      return rupiah
+}
 
 class BerandaComponent extends React.Component {
     constructor(props) {
@@ -48,12 +59,12 @@ class BerandaComponent extends React.Component {
                     results: result
                 });
             });
-            const channel = socket.subscribe('results');
-            channel.bind('results', (data) => {
-                this.setState({
-                    results: data
-                });
+        const channel = socket.subscribe('results');
+        channel.bind('results', (data) => {
+            this.setState({
+                results: data
             });
+        });
     }
 
 
@@ -163,7 +174,7 @@ class BerandaComponent extends React.Component {
         // end highchartjs
 
         var persenpaslon = [this.state.results.persensuara1, this.state.results.persensuara2, this.state.results.persensuara3];
-        var nilaipaslons = [this.state.results.suara1, this.state.results.suara2, this.state.results.suara3];
+        var nilaipaslons = [String(this.state.results.suara1), String(this.state.results.suara2), String(this.state.results.suara3)];
         return (
             <Container fluid className="mt-3 px-5">
                 <div className="row">
@@ -171,7 +182,7 @@ class BerandaComponent extends React.Component {
                         <div className="text-center judul">
                             <h4 className="text-danger">Perhitungan Cepat</h4>
                             <h5>PEMILIHAN BUPATI DAN WAKIL BUPATI KABUPATEN SOLOK SELATAN</h5>
-                            <h5>Periode 2021-2026</h5>
+                            <h5>Periode 2021-2024</h5>
                         </div>
                         <div className="calon row">
                             {
@@ -181,9 +192,9 @@ class BerandaComponent extends React.Component {
                                             <Card className="p-0 border-0">
                                                 <CardBody className="text-center p-0">
                                                     <CardText><h1>{persenpaslon[key]}%</h1></CardText>
-                                                    <h5>{nilaipaslons[key]} Suara</h5>
+                                                    <h5>{Currency(nilaipaslons[key])} Suara</h5>
                                                     <h1>{key + 1}</h1>
-                                                    <img top src={"https://pantaustorage.blob.core.windows.net/blobpantau/"+item.foto} alt="cap1" width="80%" />
+                                                    <img top src={"https://pantaustorage.blob.core.windows.net/blobpantau/" + item.foto} alt="cap1" width="80%" />
                                                     <CardText>{item.bupati} - {item.wakil}</CardText>
                                                 </CardBody>
                                             </Card>
