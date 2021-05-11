@@ -1,5 +1,6 @@
 import React from 'react';
-import { Container } from 'reactstrap';
+import { Container, NavItem } from 'reactstrap';
+import CardComponent from '../components/CardComponent';
 import Footer from '../components/footer';
 import NavbarComponent from '../components/NavbarComponent';
 import '../index.css';
@@ -50,25 +51,8 @@ class PerolehanSuara extends React.Component {
                                                     <div className="card-header bg-danger">
                                                         <h6 className="mb-0 text-white">{item.kecamatan}</h6>
                                                     </div>
-                                                    <div className="card-body p-2">
-                                                        <div className="row">
-                                                            <div className="col-8">
-                                                                Jumlah Nagari
-                                        </div>
-                                                            <div className="col-4">{jumlahnagari}</div>
-                                                        </div>
-                                                        <div className="row">
-                                                            <div className="col-8">
-                                                                Jumlah TPS
-                                        </div>
-                                                            <div className="col-4">{jumlahtps}</div>
-                                                        </div>
-                                                        <div className="row">
-                                                            <div className="col-8">
-                                                                Jumlah Pemilih Tetap
-                                        </div>
-                                                            <div className="col-4">{jumlahjpl}</div>
-                                                        </div>
+                                                    <div className="card-body p-2">  
+                                                      <CardComponent kecamatan={item.kecamatan}/>
                                                         <a href={"/detail/"+item.kecamatan} className="btn btn-outline-danger btn-sm  float-right">Detail</a>
                                                     </div>
                                                 </div>

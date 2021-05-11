@@ -13,6 +13,7 @@ const Login = () => {
         const response = await fetch('https://pantauapp.azurewebsites.net/api/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
+            // credentials: 'include',
             body: JSON.stringify({
                 email,
                 password
