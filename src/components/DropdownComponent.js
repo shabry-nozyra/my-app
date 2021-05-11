@@ -37,12 +37,13 @@ class DropdownComponent extends React.Component {
 	}
 	
 	render() {
+        console.log(this.state.countries)
 		return (
-			<div id="container mt-5 " className="row">
+			<div id="container mt-5 " className="col-6">
 
-				<div className="col-4">
-					<label>Kecamatan</label> <br />
-					<select placeholder="Country" value={this.state.selectedCountry} onChange={this.changeCountry}>
+				<div className="my-3">
+					<label>Kecamatan :</label> <br />
+					<select placeholder="Country" value={this.state.selectedCountry} onChange={this.changeCountry} className="form-control">
 						<option>--Pilih Kecamatan--</option>
 						{this.state.countries.map((e, key) => {
 							return <option key={key}>{e.name}</option>;
@@ -50,9 +51,9 @@ class DropdownComponent extends React.Component {
 					</select>
 				</div>
 
-				<div className="col-4">
-					<label>Nagari</label><br />
-					<select placeholder="State" value={this.state.selectedState} onChange={this.changeState}>
+				<div className="my-3">
+					<label>Nagari :</label><br />
+					<select placeholder="State" value={this.state.selectedState} onChange={this.changeState} className="form-control">
 						<option>--Pilih Nagari--</option>
 						{this.state.states.map((e, key) => {
 							return <option key={key}>{e.name}</option>;
@@ -60,9 +61,9 @@ class DropdownComponent extends React.Component {
 					</select>
 				</div>
 				
-				<div className="col-4">
-					<label>Jorong</label><br />
-					<select placeholder="City">
+				<div className="my-3">
+					<label>Jorong :</label><br />
+					<select placeholder="City" className="form-control">
 						<option>--Pilih Jorong--</option>
 						{this.state.cities.map((e, key) => {
 							return <option key={key}>{e}</option>;
