@@ -92,7 +92,7 @@ class PerolehanSuaraKecamatan extends React.Component {
                                                                             <div className="card mb-3">
                                                                                 <div className="row no-gutters">
                                                                                     <div className="col-md-6 d-flex justify-content-center align-items-center p-1">
-                                                                                        <img src={"https://pantaustorage.blob.core.windows.net/blobpantau/" + itemku.foto} className="card-img" alt="foto_paslon_3" />
+                                                                                        <img src={"https://pantaustorage01.blob.core.windows.net/blobpantau/" + itemku.foto} className="card-img" alt="foto_paslon_3" />
                                                                                     </div>
                                                                                     <div className="col-md-6 d-flex justify-content-center align-items-center p-2">
                                                                                          {keyku == 0 ? item.suara1: ""}
@@ -112,111 +112,8 @@ class PerolehanSuaraKecamatan extends React.Component {
                                                     </div>
                                                     <div className="card-footer text-muted">
                                                         <div className="row d-flex justify-content-between">
-                                                            <div className="col-8">
+                                                            <div className="col-12">
                                                                 <footer className="blockquote-footer">Jumlah Pemilih Tetap : {item.jpl}</footer>
-                                                            </div>
-                                                            <div className="col-4">
-                                                                <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                                    <div className="modal-dialog modal-lg">
-                                                                        <div className="modal-content">
-                                                                            <div className="modal-header bg-danger text-white">
-                                                                                <h5 className="modal-title" id="exampleModalLabel">TPS 6 - Nagari pakan rabaa utara                                                            - Jorong </h5>
-                                                                                <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                                                                                    <span aria-hidden="true">×</span>
-                                                                                </button>
-                                                                            </div>
-                                                                            <div className="modal-body">
-                                                                                <div className="row">
-                                                                                    <div className="col-6">
-
-                                                                                        <div className="row no-gutters">
-                                                                                            <div className="col-md-4 d-flex justify-content-center align-items-center p-1">
-                                                                                                <img src="https://rancak.nozyra.xyz/assets/images/paslonbupati/0ca91873c82e1769c4155317d9512e94.jpg" className="card-img" alt="..." />
-                                                                                            </div>
-                                                                                            <div className="col-md-8 text-left p-2">
-
-                                                                                                <h4 className="card-title mb-0">2</h4>
-
-                                                                                                <h1 className="card-title mb-0">0 %</h1>
-                                                                                                <h4 className="card-title mb-0">60 Suara</h4>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div className="row no-gutters">
-                                                                                            <div className="col-md-4 d-flex justify-content-center align-items-center p-1">
-                                                                                                <img src="https://rancak.nozyra.xyz/assets/images/paslonbupati/5c10ded8c3632be7630ae6f45f868138.jpg" className="card-img" alt="..." />
-                                                                                            </div>
-                                                                                            <div className="col-md-8 text-left p-2">
-
-                                                                                                <h4 className="card-title mb-0">3</h4>
-
-                                                                                                <h1 className="card-title mb-0">0 %</h1>
-                                                                                                <h4 className="card-title mb-0">42 Suara</h4>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div className="row no-gutters">
-                                                                                            <div className="col-md-4 d-flex justify-content-center align-items-center p-1">
-                                                                                                <img src="https://rancak.nozyra.xyz/assets/images/paslonbupati/5cb6c7002e76d00cf4bf9bbbff8c33a7.jpg" className="card-img" alt="..." />
-                                                                                            </div>
-                                                                                            <div className="col-md-8 text-left p-2">
-
-                                                                                                <h4 className="card-title mb-0">1</h4>
-
-                                                                                                <h1 className="card-title mb-0">0 %</h1>
-                                                                                                <h4 className="card-title mb-0">35 Suara</h4>
-                                                                                            </div>
-                                                                                        </div>
-
-                                                                                    </div>
-                                                                                    <div className="col-6">
-                                                                                        <div className="row">
-                                                                                            <div className="col-8">
-                                                                                                <h4>Suara Sah</h4>
-                                                                                            </div>
-                                                                                            <div className="col-4">
-                                                                                                <h4>: </h4>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div className="row mt-3">
-                                                                                            <div className="col-8">
-                                                                                                <h4>Suara Tidak Sah</h4>
-                                                                                            </div>
-                                                                                            <div className="col-4">
-                                                                                                <h4>: 7</h4>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div className="row mt-3">
-                                                                                            <div className="col-8">
-                                                                                                <h4>Jumlah Suara Masuk</h4>
-                                                                                            </div>
-                                                                                            <div className="col-4">
-                                                                                                <h4>: 7</h4>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div className="row mt-3">
-                                                                                            <div className="col-8">
-                                                                                                <h4>Jumlah Pemilih Tetap</h4>
-                                                                                            </div>
-                                                                                            <div className="col-4">
-                                                                                                <h4>: 180</h4>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div className="row mt-3">
-                                                                                            <div className="col-8">
-                                                                                                <h4>Suara Golput</h4>
-                                                                                            </div>
-                                                                                            <div className="col-4">
-                                                                                                <h4>: 36</h4>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div className="modal-footer">
-                                                                                <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
                                                             </div>
                                                         </div>
 
