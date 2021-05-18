@@ -19,3 +19,10 @@ code {
 .h-300{
   height: 300px;
 }
+
+.bottomfooter{
+  position: fixed !important;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}

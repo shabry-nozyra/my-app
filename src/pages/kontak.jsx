@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container } from 'reactstrap';
-import Footer from '../components/footer';
+import FooterPrivasi from '../components/footerprivasi';
 import NavbarComponent from '../components/NavbarComponent';
 import '../index.css';
 
@@ -9,7 +9,7 @@ const Kontak = () => {
        
         <div>
              <NavbarComponent />
-            <Container fluid className="mt-3 px-5">
+            <Container fluid className="mt-3 px-5 mb-5">
                 <div className="row">
                     <div className="col-12 px-3 pt-0">
                         <nav aria-label="breadcrumb">
@@ -76,7 +76,7 @@ const Kontak = () => {
                     </div>
                 </div>
             </Container>
-            <Footer />
+            <FooterPrivasi />
         </div>
     );
 }

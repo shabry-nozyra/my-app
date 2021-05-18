@@ -14,6 +14,7 @@ import PerolehanSuara from './pages/perolehansuara';
 import PerolehanSuaraKecamatan from './pages/perolehansuarakecamatan';
 import Tentang from './pages/tentang';
 import Kontak from './pages/kontak';
+import Privasi from './pages/privasi';
 class App extends Component {
   render() {
     return (
@@ -31,6 +32,7 @@ class App extends Component {
               <Route path="/adminpant4u" component={Admin} />
               <Route path="/Register" component={Register} />
               <Route path="/kecurangan" component={Kecurangan} />
+              <Route path="/privasi" component={Privasi} />
               <Redirect to="/404" />
             </Switch>
         </Router>

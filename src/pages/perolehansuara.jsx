@@ -1,7 +1,8 @@
 import React from 'react';
 import { Container, NavItem } from 'reactstrap';
 import CardComponent from '../components/CardComponent';
-import Footer from '../components/footer';
+import FooterPrivasi from '../components/footerprivasi';
+
 import NavbarComponent from '../components/NavbarComponent';
 import '../index.css';
 
@@ -30,7 +31,7 @@ class PerolehanSuara extends React.Component {
         return (
             <div>
                 <NavbarComponent />
-                <Container fluid className="mt-3 px-5">
+                <Container fluid className="mt-3 px-5 mb-5">
                     <div className="row">
                         <div className="col-md-9 px-3 pt-0">
                             <nav aria-label="breadcrumb">
@@ -87,7 +88,7 @@ class PerolehanSuara extends React.Component {
                         </div>
                     </div>
                 </Container>
-                <Footer />
+                <FooterPrivasi />
             </div>
         );
     }

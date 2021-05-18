@@ -1,18 +1,14 @@
 import React from 'react'
 import { Container } from 'reactstrap'
 import '../index.css';
-import {
-    Card, CardHeader, CardBody
-} from 'reactstrap';
-import { Table } from 'reactstrap';
 import NavbarComponent from '../components/NavbarComponent';
-import Footer from '../components/footer';
+import FooterPrivasi from '../components/footerprivasi';
 
 const Kecurangan = () => {
     return (
         <div>
         <NavbarComponent />
-        <Container fluid className="mt-3 px-5">
+        <Container fluid className="mt-3 px-5 mb-5">
             <div className="row">
                 <div className="col-md-9 px-3 pt-0">
                     <nav aria-label="breadcrumb">
@@ -68,7 +64,7 @@ const Kecurangan = () => {
         </Container>
 
    
-        <Footer/>
+        <FooterPrivasi/>
         </div>
      );
 }

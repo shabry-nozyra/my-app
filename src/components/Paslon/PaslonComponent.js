@@ -72,9 +72,7 @@ class PaslonComponent extends React.Component {
                                 <div className="col-md-4" key={'i' + key}>
                                     <Card key={key} className="mb-4">
                                         <Card.Img variant="top"
-                                            src={
-                                                "https://rancak.nozyra.xyz/assets/images/paslonbupati/5c10ded8c3632be7630ae6f45f868138.jpg"
-                                            }
+                                            src={"https://pantaustorage01.blob.core.windows.net/blobpantau/" + item.foto}
                                         />
                                         <Card.Body className="text-center">
                                             <Card.Title className="NamaBupati"><b>{item.bupati} - {item.wakil}</b></Card.Title>

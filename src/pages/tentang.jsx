@@ -2,7 +2,7 @@ import React from 'react'
 import '../index.css';
 import { Container } from 'reactstrap';
 import NavbarComponent from '../components/NavbarComponent';
-import Footer from '../components/footer';
+import FooterPrivasi from '../components/footerprivasi';
 
 const Tentang = () => {
     return (
@@ -28,7 +28,7 @@ const Tentang = () => {
                 </div>
             </div>
         </Container>
-            <Footer />
+            <FooterPrivasi />
         </div>
         );
 }

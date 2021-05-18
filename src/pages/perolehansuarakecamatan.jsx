@@ -1,10 +1,8 @@
 import React from 'react';
 import { Container } from 'reactstrap';
 import '../index.css';
-import Foto from "../image/img.jpg";
-
-import Footer from '../components/footer';
 import NavbarComponent from '../components/NavbarComponent';
+import FooterPrivasi from '../components/footerprivasi';
 class PerolehanSuaraKecamatan extends React.Component {
     constructor(props) {
         super(props);
@@ -53,7 +51,7 @@ class PerolehanSuaraKecamatan extends React.Component {
         return (
             <div>
                 <NavbarComponent />
-                <Container fluid className="mt-3 px-5">
+                <Container fluid className="mt-3 px-5 mb-5">
                     <div className="row">
                         <div className="col-md-9 px-3 pt-0">
                             <nav aria-label="breadcrumb">
@@ -150,7 +148,7 @@ class PerolehanSuaraKecamatan extends React.Component {
                         </div>
                     </div>
                 </Container>
-                <Footer />
+                <FooterPrivasi />
             </div>
         );
     }
