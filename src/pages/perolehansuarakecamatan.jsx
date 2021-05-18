@@ -65,8 +65,9 @@ class PerolehanSuaraKecamatan extends React.Component {
                             <div className="row">
 
                                 {
-                                    this.state.results.map(function (item, key) {
+                                     this.state.results.map(function (item, key) {
                                         return (
+                                            
                                             <div className="col-md-4 p-2">
                                                 <div className="card">
                                                     <div className="card-header bg-danger p-2">
@@ -119,6 +120,7 @@ class PerolehanSuaraKecamatan extends React.Component {
                                                     </div>
                                                 </div>
                                             </div>
+                                           
                                         )
                                     })
                                 }

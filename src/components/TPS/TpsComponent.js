@@ -16,6 +16,7 @@ const TpsComponent = (props) => {
                         <hr></hr>
                         <div className="text-right p-3">
                             <a className="btn btn-primary" href="/adminpant4u/tps/add">Tambah TPS Baru</a>
+                            <a className="btn btn-danger ml-2" href="">Download pdf</a>
                         </div>
                         <div className="row">
                             <div className="col-12">

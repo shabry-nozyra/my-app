@@ -33,7 +33,7 @@ function Home() {
                                 <i className="fa fa-fw fa-lg fa-address-card"></i>
                             </div>
                             <h5 className="card-title mb-3">Petugas TPS</h5>
-                            <h4 className="card-title nomor fs24">0</h4>
+                            <h4 className="card-title nomor fs24">195</h4>
                             <a href="/adminpant4u/petugastps" className="btn btn-outline-light btn-sm">Lihat Detail</a>
                         </div>
                     </div>
