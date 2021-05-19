@@ -41,13 +41,13 @@ function Currency(bilangan) {
                     <div className="col-8">
                         Jumlah TPS
                     </div>
-                    <div className="col-4">{Currency(String(this.state.details.total_tps))}</div>
+                    <div className="col-4">{this.state.details.total_tps}</div>
                 </div>
                 <div className="row">
                     <div className="col-8">
                         Jumlah Pemilih Tetap
                     </div>
-                    <div className="col-4">{this.state.details.total_jpl}</div>
+                    <div className="col-4">{Currency(String(this.state.details.total_jpl))}</div>
                 </div>
             </div>
         )
