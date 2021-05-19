@@ -47,7 +47,6 @@ class PerolehanSuaraKecamatan extends React.Component {
         var kec = this.props.match.params.kec;
         var fotopaslon = this.state.paslons;
         var suarapaslon = this.state.results;
-        console.log(suarapaslon);
         return (
             <div>
                 <NavbarComponent />
@@ -68,7 +67,7 @@ class PerolehanSuaraKecamatan extends React.Component {
                                      this.state.results.map(function (item, key) {
                                         return (
                                             
-                                            <div className="col-md-4 p-2">
+                                            <div className="col-md-4 p-2" key={key.toString()}>
                                                 <div className="card">
                                                     <div className="card-header bg-danger p-2">
                                                         <div className="row">
@@ -87,7 +86,7 @@ class PerolehanSuaraKecamatan extends React.Component {
                                                             {
                                                                 fotopaslon.map(function (itemku, keyku) {
                                                                     return (
-                                                                        <div className="col-6">
+                                                                        <div className="col-6" key={keyku.toString()}>
                                                                             <div className="card mb-3">
                                                                                 <div className="row no-gutters">
                                                                                     <div className="col-md-6 d-flex justify-content-center align-items-center p-1">
@@ -136,7 +135,7 @@ class PerolehanSuaraKecamatan extends React.Component {
                                         {
                                             this.state.kecamatan.map(function (item, key) {
                                                 return (
-                                                    <a href={"/detail/" + item.kecamatan} className="text-dark" id={key}>
+                                                    <a href={"/detail/" + item.kecamatan} className="text-dark" key={key.toString()}>
                                                         <li className="list-group-item d-flex justify-content-between align-items-center">
                                                             {item.kecamatan}
                                                         </li>

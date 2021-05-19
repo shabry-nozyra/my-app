@@ -1,7 +1,6 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
 import { Card, CardHeader, CardBody, CardText } from 'reactstrap'
-import paslon1 from "../image/img.jpg"
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 import highchartsMap from "highcharts/modules/map";
@@ -188,13 +187,13 @@ class BerandaComponent extends React.Component {
                             {
                                 this.state.paslons.map(function (item, key) {
                                     return (
-                                        <div className="col-4">
+                                        <div className="col-4" key={key.toString()}>
                                             <Card className="p-0 border-0">
                                                 <CardBody className="text-center p-0">
-                                                    <CardText><h1>{persenpaslon[key]}%</h1></CardText>
-                                                    <h5>{Currency(nilaipaslons[key])} Suara</h5>
+                                                    <h1>{persenpaslon[key]}%</h1>
+                                                    <h6>{Currency(nilaipaslons[key])} Suara</h6>
                                                     <h1>{key + 1}</h1>
-                                                    <img top src={"https://pantaustorage01.blob.core.windows.net/blobpantau/" + item.foto} alt="cap1" width="80%" />
+                                                    <img src={"https://pantaustorage01.blob.core.windows.net/blobpantau/" + item.foto} alt="cap1" width="80%" />
                                                     <CardText>{item.bupati} - {item.wakil}</CardText>
                                                 </CardBody>
                                             </Card>
@@ -208,7 +207,7 @@ class BerandaComponent extends React.Component {
                         <Card>
                             <CardHeader className="bg-dark text-white">Peta Sebaran Suara</CardHeader>
                             <CardBody className="text-center">
-                                <div class="hello">
+                                <div className="hello">
                                     <HighchartsReact
                                         constructorType={"mapChart"}
                                         highcharts={Highcharts}

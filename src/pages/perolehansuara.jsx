@@ -6,6 +6,7 @@ import FooterPrivasi from '../components/footerprivasi';
 import NavbarComponent from '../components/NavbarComponent';
 import '../index.css';
 
+
 const jumlahjpl = 0;
 const jumlahnagari = 0;
 const jumlahtps = 0;
@@ -47,7 +48,7 @@ class PerolehanSuara extends React.Component {
                                     this.state.results.map(function (item, key) {
                                         return (
 
-                                            <div className="col-md-4 p-2">
+                                            <div className="col-md-4 p-2" key={key.toString()}>
                                                 <div className="card">
                                                     <div className="card-header bg-danger">
                                                         <h6 className="mb-0 text-white">{item.kecamatan}</h6>
@@ -74,7 +75,7 @@ class PerolehanSuara extends React.Component {
                                     {
                                             this.state.results.map(function (item, key) {
                                                 return (
-                                                    <a href={"/detail/" + item.kecamatan} className="text-dark" id={key}>
+                                                    <a href={"/detail/" + item.kecamatan} className="text-dark" key={key.toString()}>
                                                         <li className="list-group-item d-flex justify-content-between align-items-center">
                                                             {item.kecamatan}
                                                         </li>

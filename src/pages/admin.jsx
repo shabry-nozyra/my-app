@@ -24,7 +24,7 @@ const Admin = () => {
                 <Sidebar />
                 <div id="content-wrapper" className="d-flex flex-column">
                     <div id="content">
-                        <NavbarAdmin />
+                      <NavbarAdmin />
                         <div className="container-fluid">
                         <Switch>
                             <Route  exact path="/adminpant4u/" component={Home} />

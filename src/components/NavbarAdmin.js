@@ -1,6 +1,12 @@
 import React, {useEffect, useState} from 'react';
-export const NavbarAdmin = () => {
+import {Link} from "react-router-dom";
+import { Redirect } from "react-router-dom";
+
+
+export const NavbarAdmin = (props: { name: string, setName: (name: string) => void }) => {
+    const [redirect, setRedirect] = useState(false);
     const [name, setName] = useState('');
+   
 
     useEffect(() => {
         (
@@ -14,6 +20,19 @@ export const NavbarAdmin = () => {
             }
         )();
     });
+    const logout = async  (e: SyntheticEvent) => {
+        e.preventDefault();
+        await fetch('https://pantauapp.azurewebsites.net/api/logout', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            credentials: 'include',
+        });
+        setName('');
+        setRedirect(true);
+    }
+    if (redirect) {
+        return <Redirect to="/admin" />;
+    }
     return (
         <nav className="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
         <button id="sidebarToggleTop" className="btn btn-link d-md-none rounded-circle mr-3">
@@ -143,7 +162,7 @@ export const NavbarAdmin = () => {
             <li className="nav-item dropdown no-arrow">
                 <a className="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <span className="mr-2 d-none d-lg-inline text-gray-600 small">{"admin"}</span>
+                    <span className="mr-2 d-none d-lg-inline text-gray-600 small">{name}</span>
                     <img className="img-profile rounded-circle"
                         src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"></img>
                 </a>
@@ -162,10 +181,7 @@ export const NavbarAdmin = () => {
                         Activity Log
                     </a>
                     <div className="dropdown-divider"></div>
-                    <a className="dropdown-item" href="/admin">
-                        <i className="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                        Logout
-                    </a>
+                    <Link className="dropdown-item" onClick={logout}>Logout</Link>
                 </div>
             </li>
 
@@ -173,7 +189,7 @@ export const NavbarAdmin = () => {
 
     </nav>
     )
-}
+};
 
 
 
