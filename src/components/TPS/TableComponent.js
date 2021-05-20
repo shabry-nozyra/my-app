@@ -62,10 +62,6 @@ const tablecomponent = (props) => {
         text: 'Lokasi',
         sort: true //menambahkan fungsi sort
     },{
-        dataField: 'jorong',
-        text: 'Jorong',
-        sort: true //menambahkan fungsi sort
-    },{
         dataField: 'nagari',
         text: 'Nagari',
         sort: true //menambahkan fungsi sort

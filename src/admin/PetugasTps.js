@@ -8,8 +8,15 @@ import ToolkitProvider, { Search } from 'react-bootstrap-table2-toolkit';
 import paginationFactory from 'react-bootstrap-table2-paginator';
 import { NavbarAdmin } from '../components/NavbarAdmin';
 import Sidebar from "../components/Sidebar";
+import jsPDF from "jspdf";
 
 
+const petugasTpsReport = () => {
+    var doc = new jsPDF('p','px');
+    doc.setFont('courier')
+    doc.text(20,20, 'Petugas TPS report')
+    doc.save("petugas-tps-report.pdf")
+}
 const handleClick = (dispatch, id) => {
 
     swal({
@@ -38,10 +45,6 @@ const columns = [{
         return { width: "8%" };
     }
 }, {
-    dataField: 'lokasi',
-    text: 'Lokasi',
-    sort: true,
-}, {
     dataField: 'nagari',
     text: 'Nagari',
     sort: true,
@@ -65,10 +68,19 @@ const columns = [{
     dataField: 'email',
     sort: true,
     text: 'Email',
-    headerStyle: () => {
-        return { width: "8%" };
-    },
 }, {
+    dataField: "link",
+    text: "kirim Password",
+    formatter: (rowContent, row) => {
+        return (
+            <div>
+                <Button color="dark" className="m-1 btn-sm" onClick={() => handleClick(row.id)}>
+                    <i className="fa fa-fw fa-paper-plane"></i>
+                </Button>
+            </div>
+        );
+    },
+},{
     dataField: "link",
     text: "Action",
     formatter: (rowContent, row) => {
@@ -162,9 +174,8 @@ class PetugasTps extends React.Component {
                                     </div>
                                     <div class=" col-12 text-right">
                                         <div>
-                                            <a class="btn btn-danger mr-3" target="_blank"
-                                                href=""><i
-                                                    class="fa fa-fw fa-file-pdf"></i> Simpan pdf</a>
+                                            <button class="btn btn-danger mr-3" onClick={petugasTpsReport}><i
+                                                    class="fa fa-fw fa-file-pdf"></i> Simpan pdf</button>
                                         </div>
                                     </div>
 

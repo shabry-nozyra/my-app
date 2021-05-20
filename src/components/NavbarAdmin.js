@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import { Redirect } from "react-router-dom";
 
 
-export const NavbarAdmin = (props: { name: string, setName: (name: string) => void }) => {
+export const NavbarAdmin = () => {
     const [redirect, setRedirect] = useState(false);
     const [name, setName] = useState('');
    
@@ -31,7 +31,7 @@ export const NavbarAdmin = (props: { name: string, setName: (name: string) => vo
         setRedirect(true);
     }
     if (redirect) {
-        return <Redirect to="/admin" />;
+        window.location.replace("/admin");
     }
     return (
         <nav className="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">

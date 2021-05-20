@@ -1,3 +1,4 @@
+import jsPDF from 'jspdf';
 import React from 'react'
 import {connect} from 'react-redux';
 import TableComponent from './TableComponent';
@@ -9,6 +10,14 @@ const mapStateToProps = (state) => {
     }
 }
 
+const tpsReport = () => {
+    var doc = new jsPDF('p','px');
+    
+    doc.setFont('courier')
+    doc.text(20,20, 'TPS report')
+    doc.save("tps-report.pdf")
+}
+
 const TpsComponent = (props) => {
         return (
                 <div className="p-2">
@@ -16,7 +25,7 @@ const TpsComponent = (props) => {
                         <hr></hr>
                         <div className="text-right p-3">
                             <a className="btn btn-primary" href="/adminpant4u/tps/add">Tambah TPS Baru</a>
-                            <a className="btn btn-danger ml-2" href="">Download pdf</a>
+                            <button className="btn btn-danger ml-2" onClick={tpsReport}>Download pdf</button>
                         </div>
                         <div className="row">
                             <div className="col-12">
